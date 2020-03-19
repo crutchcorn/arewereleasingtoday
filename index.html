@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Are we deploying today?</title>
+        <style>
+            .parent {
+                    display: flex;
+                    justify-content: center;
+                    align-content: center;
+                    flex-direction: column;
+                    height: 100%;
+            }
+            #infoDisplay {
+                text-align: center;
+                font-size: 5rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="parent">
+            <h1 id="infoDisplay"></h1>
+        </div>
+        <script>
+            const h1El = document.querySelector('#infoDisplay');
+            const today = new Date();
+            if(today.getDay() == 5 || today.getDay() == 6 || today.getDay() == 0) {
+                h1El.innerText = "I sure hope not"
+            } else {
+                h1El.innerText = "Go for it"
+            }
+        </script>
+    </body>
+</html>
